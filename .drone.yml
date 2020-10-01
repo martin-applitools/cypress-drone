@@ -4,10 +4,9 @@ name: cypress-applitools-drone-ci
 
 steps:
   - name: testing
-    image: cypress/base:latest
+    image: cypress/included:5.3.0
     commands:
       - npm install
-      - $(npm bin)/cypress run
       - npx eyes-setup
       #- $(npm bin)/wait-on -i 500 -t 300000 $WAIT_ON
       - $(npm bin)/cypress run --headless --browser=chrome  --spec=./e2e/applitools.js
