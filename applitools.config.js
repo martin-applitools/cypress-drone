@@ -1,11 +1,11 @@
 module.exports = {
-    showLogs: false,
+    showLogs: true,
     saveDebugData: false,
     apiKey: 'zu4BybAMbOeRPtYF2mWHTAjNJOiuRPcD5JOUWcBP8lU110',
     concurrency: 25,
     useDom: false,
     enablePatterns: false,
-    failCypressOnDiff: true,
+    failCypressOnDiff: false,
     //batchName: 'CondeNast Build: ' + process.env.DRONE_BUILD_NUMBER,
     batchId: process.env.DRONE_COMMIT_SHA,
     matchLevel: 'Layout',
