@@ -15,6 +15,8 @@ module.exports = {
         {width: 375, height: 720, name: 'chrome' },
         {width: 1280, height: 720, name: 'firefox'},
         {width: 375, height: 720, name: 'firefox'},
+        {width: 1280, height: 720, name: 'safari'},
+        {width: 375, height: 720, name: 'safari'},
         //{width: 1900, height: 1080, name: 'edge'},
         //{width: 1900, height: 1080, name: 'safari'},
         // //{width: 640, height: 360, name: 'chrome' },
