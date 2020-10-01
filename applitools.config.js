@@ -6,7 +6,7 @@ module.exports = {
     useDom: false,
     enablePatterns: false,
     failCypressOnDiff: false,
-    batchId: process.env.DRONE_COMMIT_SHA,
+    batchId: process.env.DRONE_BUILD_NUMBER,
     matchLevel: 'Layout',
     browser: [
         //W3C Top5 Screen Resolutions through 10/19 https://www.w3counter.com/globalstats.php
