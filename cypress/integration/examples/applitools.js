@@ -13,7 +13,7 @@ const urls = [//'https://www.condenast.com/',
               'https://www.condenast.com/brands/house-and-garden',
               'https://www.condenast.com/brands/la-cucina-italiana',
               'https://www.condenast.com/brands/love',
-              'https://www.condenast.com/brands/l\'uomo',
+              //'https://www.condenast.com/brands/l\'uomo',
               'https://www.condenast.com/brands/pitchfork',
               'https://www.condenast.com/brands/self',
               'https://www.condenast.com/brands/tatler',
@@ -25,8 +25,7 @@ const urls = [//'https://www.condenast.com/',
               'https://www.condenast.com/brands/vogue',
               'https://www.condenast.com/brands/vogue-business',
               'https://www.condenast.com/brands/vogue-global-network',
-              'https://www.condenast.com/brands/wired'
-                ];
+              'https://www.condenast.com/brands/wired'];
 describe('Should Visually Validate Conde Nast WebSite and Brands', () => {
         it(`Should take a full page screenshot of URL`, () => {
             for(let i=0; i<urls.length; i++){
