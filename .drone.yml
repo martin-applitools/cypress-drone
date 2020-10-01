@@ -4,7 +4,7 @@ name: cypress-applitools-drone-ci
 
 steps:
   - name: testing
-    image: cypress/included:5.3.0
+    image: cypress/browsers:node12.14.1-chrome85-ff81
     commands:
       - npm install
       - npx eyes-setup
