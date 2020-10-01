@@ -5,8 +5,8 @@ module.exports = {
     concurrency: 25,
     useDom: false,
     enablePatterns: false,
-    failCypressOnDiff: false,
-    batchName: 'CondeNast Build: ' + process.env.DRONE_BUILD_NUMBER,
+    failCypressOnDiff: true,
+    //batchName: 'CondeNast Build: ' + process.env.DRONE_BUILD_NUMBER,
     batchId: process.env.DRONE_COMMIT_SHA,
     matchLevel: 'Layout',
     browser: [
