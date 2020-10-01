@@ -7,7 +7,6 @@ steps:
     image: cypress/browsers:node12.14.1-chrome85-ff81
     commands:
       - npm install
-      - npx eyes-setup
       #- $(npm bin)/wait-on -i 500 -t 300000 $WAIT_ON
       - npx cypress run --headless --browser=chrome  --spec=./e2e/applitools.js
 
