@@ -1,6 +1,5 @@
 {
   "defaultCommandTimeout": 160000,
-  "eyesTimeout": 180000,
   "pageLoadTimeout": 180000,
   "fixturesFolder": false,
   "integrationFolder": "/drone/src/cypress/integration",
