@@ -8,6 +8,6 @@
   "pluginsFile": "/drone/src/cypress/plugins/index.js",
   "videosFolder": "/drone/src/cypress/videos",
   "video":false,
-  "viewportWidth": 1200,
-  "viewportHeight": 800
+  "viewportWidth": 800,
+  "viewportHeight": 600
 }
