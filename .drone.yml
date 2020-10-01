@@ -7,7 +7,7 @@ steps:
     image: cypress/base:latest
     commands:
       - npm install
-      - $(npm bin)/cypress install
+      - $(npm bin)/cypress open
       - npx eyes-setup
       #- $(npm bin)/wait-on -i 500 -t 300000 $WAIT_ON
       - $(npm bin)/cypress run --headless --browser=chrome  --spec=./e2e/applitools.js
