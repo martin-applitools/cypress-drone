@@ -3,7 +3,7 @@ module.exports = {
     saveDebugData: false,
     apiKey: 'zu4BybAMbOeRPtYF2mWHTAjNJOiuRPcD5JOUWcBP8lU110',
     concurrency: 25,
-    disableBrowserFetching: true,
+    //disableBrowserFetching: true,
     useDom: false,
     enablePatterns: false,
     failCypressOnDiff: false,
