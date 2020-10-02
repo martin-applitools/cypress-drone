@@ -1,5 +1,5 @@
 
-const urls = [//'https://www.condenast.com/',
+const urls = [
               'https://www.condenast.com/brands/gq',
               'https://www.condenast.com/brands/ad',
               'https://www.condenast.com/brands/allure',
