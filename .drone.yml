@@ -8,7 +8,6 @@ steps:
     commands:
       - npm install
       - npx eyes-setup
-      #- $(npm bin)/wait-on -i 500 -t 300000 $WAIT_ON
       - npx cypress run --headless --browser=chrome
 type:
 trigger:
