@@ -27,6 +27,14 @@ const urls = [
               'https://www.condenast.com/brands/vogue-global-network',
               'https://www.condenast.com/brands/wired'];
 describe('Should Visually Validate Conde Nast WebSite and Brands', () => {
+    Cypress.on('fail', (error, runnable) => {
+        debugger
+
+        // we now have access to the err instance
+        // and the mocha runnable this failed on
+
+        throw error // throw error to have test still fail
+    })
         it(`Should take a full page screenshot of URL`, () => {
             for(let i=0; i<urls.length; i++){
                 cy.eyesOpen({
