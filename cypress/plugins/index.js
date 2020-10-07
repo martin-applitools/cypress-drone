@@ -22,4 +22,4 @@ module.exports = (on, config) => {
 
 
 require('@applitools/eyes-cypress')(module);
-require('cypress-log-to-output').install(on);
+
