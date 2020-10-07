@@ -12,7 +12,7 @@ steps:
       - DRONE_DEBUG=true
       - npm install
       - npx eyes-setup
-      - npx cypress run --headless --browser=chrome
+      - DEBUG=cypress:* npx cypress run --headless --browser=chrome
 type:
 trigger:
   event:
