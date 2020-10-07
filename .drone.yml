@@ -9,6 +9,7 @@ steps:
     #image: cypress/browsers:node12.14.1-chrome85-ff81
     image: cypress/included:5.3.0
     commands:
+      - DRONE_DEBUG=true
       - npm install
       - npx eyes-setup
       - npx cypress run --headless --browser=chrome
