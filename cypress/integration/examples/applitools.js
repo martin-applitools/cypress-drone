@@ -1,7 +1,7 @@
 
 /// <reference types="@applitools/eyes-cypress" />
-const urls = ['https://www.allure.com/account/sign-in',
-    //'https://www.allure.com/branded/article/alr/allure-editor-in-chief-michelle-lee-jbeauty-tokyo',
+const allureurls = ['https://www.allure.com/account/sign-in',
+    'https://www.allure.com/branded/article/alr/allure-editor-in-chief-michelle-lee-jbeauty-tokyo',
     'https://www.allure.com/account/sign-up',
     'https://www.allure.com/gallery/best-body-washes',
     'https://www.allure.com/gallery/readers-choice-skin-care-product-winners'
@@ -15,21 +15,26 @@ const urls = ['https://www.allure.com/account/sign-in',
     // 'https://www.allure.com/video/watch/jessica-alba-organic-vanilla-sugar-body-scrub'
     ]
 describe('Should Visually Validate Conde Nast WebSite and Brands', () => {
+    before(() => {
+        cy.eyesOpen({
+            appName: 'Iheartmedia-Account-Settings',
+            testName: allureurls.toString()
 
-        it(`Should take a full page screenshot of URL`, () => {
+        });
+    });
+    after(() => {
+        cy.eyesClose();
+    });
+
+
+    it(`Should take a full page screenshot of URL`, () => {
             for(let i=0; i<urls.length; i++){
-                cy.eyesOpen({
-                    appName: 'CondeNast-POC',
-                    testName: urls[i],
-
-                });
-                cy.visit(urls[i]);
-                cy.log('Taking screenshot of:' + urls[i])
+                cy.visit(allureurls[i]);
+                cy.log('Taking screenshot of:' + allureurls[i])
                 cy.eyesCheckWindow({
                      target: 'window',
                      fully: true
                  })
-                cy.eyesClose()
             }
 
         });
