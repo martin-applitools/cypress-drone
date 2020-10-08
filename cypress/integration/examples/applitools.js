@@ -10,7 +10,7 @@ const allureurls = ['https://www.allure.com/account/sign-in',
     'https://www.allure.com/sponsored/story/how-the-dyson-corrale-straighteners-flexing-plates-cause-less-damage-to-your-hair',
     'https://www.allure.com/story/sunday-riley-united-airlines-skin-care-in-flight-amenity-kits',
     'https://www.allure.com/story/wear-orange-national-gun-violence-awareness-day',
-    'https://www.allure.com/topic/love'
+    'https://www.allure.com/topic/love',
     'https://www.allure.com/video/watch/jessica-alba-organic-vanilla-sugar-body-scrub',
     // 'https://www.allure.com/branded/article/alr/allure-editor-in-chief-michelle-lee-jbeauty-tokyo'
     ]
