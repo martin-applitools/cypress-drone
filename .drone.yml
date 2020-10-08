@@ -6,8 +6,8 @@ steps:
   - name: testing
     #shm_size: 4096000000
     #detach: true
-    image: cypress/browsers:node12.14.1-chrome85-ff81
-    #image: cypress/included:5.3.0
+    #image: cypress/browsers:node12.14.1-chrome85-ff81
+    image: cypress/included:5.3.0
     commands:
       - npm install
       - npx eyes-setup
