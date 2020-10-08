@@ -4,13 +4,16 @@ name: cypress-applitools-drone-ci
 
 steps:
   - name: testing
-    image: cypress/browsers:node12.14.1-chrome85-ff81
+    #shm_size: 4096000000
+    #detach: true
+    #image: cypress/browsers:node12.14.1-chrome85-ff81
+    image: cypress/included:5.3.0
     commands:
       - npm install
       - npx eyes-setup
-      #- $(npm bin)/wait-on -i 500 -t 300000 $WAIT_ON
       - npx cypress run --headless --browser=chrome
 type:
 trigger:
-  branch:
-    - master
+  event:
+    include:
+    - pull_request

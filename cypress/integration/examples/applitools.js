@@ -1,44 +1,31 @@
 
-const urls = [
-              'https://www.condenast.com/brands/gq',
-              'https://www.condenast.com/brands/ad',
-              'https://www.condenast.com/brands/allure',
-              'https://www.condenast.com/brands/ars-technica',
-              // //'https://www.condenast.com/brands/bon-app%C3%A9ti',
-              // //'https://www.condenast.com/brands/cond%C3%A9-nast-johansens',
-              // //'https://www.condenast.com/brands/cond%C3%A9-nast-traveller',
-              'https://www.condenast.com/brands/epicurious',
-              'https://www.condenast.com/brands/glamour',
-              'https://www.condenast.com/brands/gq-style',
-              'https://www.condenast.com/brands/house-and-garden',
-              'https://www.condenast.com/brands/la-cucina-italiana',
-              'https://www.condenast.com/brands/love',
-              //'https://www.condenast.com/brands/l\'uomo',
-              'https://www.condenast.com/brands/pitchfork',
-              'https://www.condenast.com/brands/self',
-              'https://www.condenast.com/brands/tatler',
-              'https://www.condenast.com/brands/teen-vogue',
-              'https://www.condenast.com/brands/them',
-              'https://www.condenast.com/brands/the-new-yorker',
-              'https://www.condenast.com/brands/the-world-of-interiors',
-              'https://www.condenast.com/brands/vanity-fair',
-              'https://www.condenast.com/brands/vogue',
-              'https://www.condenast.com/brands/vogue-business',
-              'https://www.condenast.com/brands/vogue-global-network',
-              'https://www.condenast.com/brands/wired'];
+/// <reference types="@applitools/eyes-cypress" />
+const urls = ['https://www.allure.com/account/sign-in',
+    'https://www.allure.com/branded/article/alr/allure-editor-in-chief-michelle-lee-jbeauty-tokyo', 'https://www.allure.com/account/sign-up',
+    'https://www.allure.com/gallery/best-body-washes', 'https://www.allure.com/gallery/readers-choice-skin-care-product-winners',
+    'https://www.allure.com/gallery/unique-halloween-costume-ideas', 'https://www.allure.com/search',
+    'https://www.allure.com/sponsored/article/native-article-branded-content-by-with-text',
+    'https://www.allure.com/sponsored/story/how-the-dyson-corrale-straighteners-flexing-plates-cause-less-damage-to-your-hair',
+    'https://www.allure.com/story/sunday-riley-united-airlines-skin-care-in-flight-amenity-kits',
+    'https://www.allure.com/story/wear-orange-national-gun-violence-awareness-day', 'https://www.allure.com/topic/love',
+    'https://www.allure.com/video/watch/jessica-alba-organic-vanilla-sugar-body-scrub']
 describe('Should Visually Validate Conde Nast WebSite and Brands', () => {
+
+    after(() => {
+        cy.eyesClose();
+    });
         it(`Should take a full page screenshot of URL`, () => {
             for(let i=0; i<urls.length; i++){
                 cy.eyesOpen({
-                        appName:'CondeNast',
-                        testName:urls[i],
-                }
-                )
+                    appName: 'CondeNast-POC',
+                    testName: urls[i],
+
+                });
                 cy.visit(urls[i]);
                 cy.eyesCheckWindow({
                      tag: urls[i],
                      target: 'window',
-                     fully: true
+                     fully: false
                  })
                 cy.eyesClose()
             }
