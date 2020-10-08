@@ -17,8 +17,8 @@ const allureurls = ['https://www.allure.com/account/sign-in',
 describe('Should Visually Validate Conde Nast WebSite and Brands', () => {
     before(() => {
         cy.eyesOpen({
-            appName: 'Iheartmedia-Account-Settings',
-            testName: allureurls.toString()
+            appName: 'CondeNast-POC',
+            testName: 'Allure URLs'
 
         });
     });
@@ -28,7 +28,7 @@ describe('Should Visually Validate Conde Nast WebSite and Brands', () => {
 
 
     it(`Should take a full page screenshot of URL`, () => {
-            for(let i=0; i<urls.length; i++){
+            for(let i=0; i<allureurls.length; i++){
                 cy.visit(allureurls[i]);
                 cy.log('Taking screenshot of:' + allureurls[i])
                 cy.eyesCheckWindow({
