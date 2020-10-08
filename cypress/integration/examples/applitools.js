@@ -1,7 +1,7 @@
 
 /// <reference types="@applitools/eyes-cypress" />
 const urls = ['https://www.allure.com/account/sign-in',
-    'https://www.allure.com/branded/article/alr/allure-editor-in-chief-michelle-lee-jbeauty-tokyo',
+    //'https://www.allure.com/branded/article/alr/allure-editor-in-chief-michelle-lee-jbeauty-tokyo',
     'https://www.allure.com/account/sign-up',
     'https://www.allure.com/gallery/best-body-washes']
     // 'https://www.allure.com/gallery/readers-choice-skin-care-product-winners',
