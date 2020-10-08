@@ -1,13 +1,11 @@
 {
-  "defaultCommandTimeout": 10000,
-  "pageLoadTimeout": 10000,
+  "defaultCommandTimeout": 180000,
+  "pageLoadTimeout": 180000,
   "eyesTimeout": 180000,
   "fixturesFolder": false,
   "integrationFolder": "cypress/integration",
   "supportFile": "cypress/support/index.js",
   "pluginsFile": "cypress/plugins/index.js",
   "videosFolder": "cypress/videos",
-  "video":false,
-  "viewportWidth": 800,
-  "viewportHeight": 600
+  "video":false
 }
