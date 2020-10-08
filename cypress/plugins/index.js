@@ -26,7 +26,7 @@ module.exports = (on, config) => {
         return launchOptions
 
     })
-    require('cypress-log-to-output').install(on)
+    //require('cypress-log-to-output').install(on)
 }
 
 

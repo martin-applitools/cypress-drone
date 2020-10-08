@@ -11,24 +11,17 @@ const allureurls = ['https://www.allure.com/account/sign-in',
     // 'https://www.allure.com/sponsored/story/how-the-dyson-corrale-straighteners-flexing-plates-cause-less-damage-to-your-hair',
     // 'https://www.allure.com/story/sunday-riley-united-airlines-skin-care-in-flight-amenity-kits',
     // 'https://www.allure.com/story/wear-orange-national-gun-violence-awareness-day',
-    'https://www.allure.com/topic/love',
+    'https://www.allure.com/topic/love'
     // 'https://www.allure.com/video/watch/jessica-alba-organic-vanilla-sugar-body-scrub'
     ]
 describe('Should Visually Validate Conde Nast WebSite and Brands', () => {
-    before(() => {
-        cy.eyesOpen({
-            appName: 'CondeNast-POC',
-            testName: 'Allure URLs'
-
-        });
-    });
-    after(() => {
-        cy.eyesClose();
-    });
-
-
     it(`Should take a full page screenshot of URL`, () => {
             for(let i=0; i<allureurls.length; i++){
+                cy.eyesOpen({
+                    appName: 'CondeNast-POC',
+                    testName: allureurls[i]
+
+                });
                 cy.visit(allureurls[i]);
                 cy.wait(5000)
                 cy.log('Taking screenshot of:' + allureurls[i])
@@ -36,6 +29,7 @@ describe('Should Visually Validate Conde Nast WebSite and Brands', () => {
                      target: 'window',
                      fully: true
                  })
+                cy.eyesClose();
             }
 
         });
