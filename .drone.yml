@@ -11,7 +11,7 @@ steps:
     commands:
       - npm install
       - npx eyes-setup
-      - DEBUG=cypress:* npx cypress run --headless --browser=chrome
+      - DEBUG=cypress:* npx cypress run --browser=chrome
 type:
 trigger:
   event:

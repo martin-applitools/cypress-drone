@@ -1,4 +1,5 @@
 
+/// <reference types="@applitools/eyes-cypress" />
 const urls = ['https://www.allure.com/account/sign-in',
     'https://www.allure.com/branded/article/alr/allure-editor-in-chief-michelle-lee-jbeauty-tokyo',
     'https://www.allure.com/account/sign-up',
@@ -25,7 +26,7 @@ describe('Should Visually Validate Conde Nast WebSite and Brands', () => {
                 cy.eyesCheckWindow({
                      tag: urls[i],
                      target: 'window',
-                     fully: true
+                     fully: false
                  })
                 cy.eyesClose()
             }
