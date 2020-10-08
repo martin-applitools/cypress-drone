@@ -1,6 +1,6 @@
 {
-  "defaultCommandTimeout": 160000,
-  "pageLoadTimeout": 180000,
+  "defaultCommandTimeout": 10000,
+  "pageLoadTimeout": 10000,
   "eyesTimeout": 180000,
   "fixturesFolder": false,
   "integrationFolder": "cypress/integration",
