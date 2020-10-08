@@ -6,20 +6,27 @@ const urls = ['https://www.allure.com/account/sign-in',
     'https://www.allure.com/sponsored/story/how-the-dyson-corrale-straighteners-flexing-plates-cause-less-damage-to-your-hair', 'https://www.allure.com/story/sunday-riley-united-airlines-skin-care-in-flight-amenity-kits',
     'https://www.allure.com/story/wear-orange-national-gun-violence-awareness-day', 'https://www.allure.com/topic/love', 'https://www.allure.com/video/watch/jessica-alba-organic-vanilla-sugar-body-scrub']
 describe('Should Visually Validate Conde Nast WebSite and Brands', () => {
+    beforeEach(() => {
+        cy.eyesOpen({
+            appName: 'Iheartmedia-CY',
+            testName: Cypress.mocha.getRunner().suite.ctx.currentTest.title,
+            batchName: 'Iheartmedia-CY-VG',
+            batchSequenceName: 'Iheartmedia-CY',
+            matchLevel: 'Layout',
+
+        });
+    });
+    afterEach(() => {
+        cy.eyesClose();
+    });
         it(`Should take a full page screenshot of URL`, () => {
             for(let i=0; i<urls.length; i++){
-                cy.eyesOpen({
-                        appName:'CondeNast',
-                        testName:urls[i],
-                }
-                )
                 cy.visit(urls[i]);
                 cy.eyesCheckWindow({
                      tag: urls[i],
                      target: 'window',
                      fully: false
                  })
-                cy.eyesClose()
             }
 
         });
