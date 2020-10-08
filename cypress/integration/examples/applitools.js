@@ -11,7 +11,7 @@ const allureurls = ['https://www.allure.com/account/sign-in',
     'https://www.allure.com/story/sunday-riley-united-airlines-skin-care-in-flight-amenity-kits',
     'https://www.allure.com/story/wear-orange-national-gun-violence-awareness-day',
     'https://www.allure.com/topic/love'
-    // 'https://www.allure.com/video/watch/jessica-alba-organic-vanilla-sugar-body-scrub',
+    'https://www.allure.com/video/watch/jessica-alba-organic-vanilla-sugar-body-scrub',
     // 'https://www.allure.com/branded/article/alr/allure-editor-in-chief-michelle-lee-jbeauty-tokyo'
     ]
 describe('Should Visually Validate Conde Nast WebSite and Brands', () => {
