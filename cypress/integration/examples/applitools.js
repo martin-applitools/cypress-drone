@@ -24,6 +24,7 @@ describe('Should Visually Validate Conde Nast WebSite and Brands', () => {
 
                 });
                 cy.visit(urls[i]);
+                cy.log('Taking screenshot of:' + urls[i])
                 cy.eyesCheckWindow({
                      target: 'window',
                      fully: true
