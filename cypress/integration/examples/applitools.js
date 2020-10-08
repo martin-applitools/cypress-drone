@@ -4,7 +4,7 @@ const allureurls = ['https://www.allure.com/account/sign-in',
     // 'https://www.allure.com/branded/article/alr/allure-editor-in-chief-michelle-lee-jbeauty-tokyo',
     'https://www.allure.com/account/sign-up',
     'https://www.allure.com/gallery/best-body-washes',
-    // 'https://www.allure.com/gallery/readers-choice-skin-care-product-winners'
+    'https://www.allure.com/gallery/readers-choice-skin-care-product-winners',
     'https://www.allure.com/gallery/unique-halloween-costume-ideas',
     'https://www.allure.com/search',
     // 'https://www.allure.com/sponsored/article/native-article-branded-content-by-with-text',
