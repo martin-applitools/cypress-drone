@@ -35,7 +35,14 @@ const bonappetiturls = [
     'https://www.bonappetit.com/story/chicago-hot-dog-taste-test',
     'https://www.bonappetit.com/story/food-lovers-guide-eating-budget',
     'https://www.bonappetit.com/video/watch/it-s-alive-with-brad-brad-makes-pickled-onions-at-home'
-]
+    ]
+const travelerurls = [
+    'https://www.cntraveler.com/',
+    'https://www.cntraveler.com//the-10-best-countries-for-expats',
+    //'https://www.cntraveler.com/sponsored/story/testingnativearticle',
+    'https://www.cntraveler.com/story/our-favorite-new-yorkers-on-the-best-things-in-all-five-boroughs',
+    'https://www.cntraveler.com/video/watch/cnt-shorties-the-2016-shorties-film-festival'
+    ]
 describe('Should Visually Validate CondeNast Brand Sites', () => {
     it(`Should take a full page screenshot of Allure URLs`, () => {
             for(let i=0; i<allureurls.length; i++){
@@ -83,6 +90,24 @@ describe('Should Visually Validate CondeNast Brand Sites', () => {
             cy.visit(bonappetiturls[i]);
             cy.wait(5000)
             cy.log('Taking screenshot of:' + bonappetiturls[i])
+            cy.eyesCheckWindow({
+                target: 'window',
+                fully: true
+            })
+            cy.eyesClose();
+        }
+
+    })
+    it(`Should take a full page screenshot of CondeNast Traveler URLs`, () => {
+        for(let i=0; i<travelerurls.length; i++){
+            cy.eyesOpen({
+                appName: 'CondeNast-POC',
+                testName: travelerurls[i]
+
+            });
+            cy.visit(travelerurls[i]);
+            cy.wait(5000)
+            cy.log('Taking screenshot of:' + travelerurls[i])
             cy.eyesCheckWindow({
                 target: 'window',
                 fully: true
