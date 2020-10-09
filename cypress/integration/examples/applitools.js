@@ -65,7 +65,17 @@ const glamoururls = [
     'https://www.glamour.com/video/watch/p-nk-watches-fan-covers-on-youtube'
     ]
 const gqurls = [
-    '',
+    'https://www.gq.com/',
+    'https://www.gq.com/culture',
+    'https://www.gq.com/gallery/spring-menswear-deals-you-wont-want-to-miss',
+    'https://www.gq.com/gq-recommends',
+    'https://www.gq.com/grooming',
+    // 'https://www.gq.com/sponsored/article/native-article-test-enable-publish-date',
+    // 'https://www.gq.com/sponsored/gallery/native-gallery-product-gallery',
+    'https://www.gq.com/story/sharp-objects-should-have-been-harder-to-watch',
+    'https://www.gq.com/style',
+    'https://www.gq.com/video/watch/above-average-joe-episode-1',
+    'https://www.gq.com/wellness'
     ]
 describe('Should Visually Validate CondeNast Brand Sites', () => {
     it(`Should take a full page screenshot of Allure URLs`, () => {
@@ -166,6 +176,23 @@ describe('Should Visually Validate CondeNast Brand Sites', () => {
             cy.visit(glamoururls[i]);
             cy.wait(5000)
             cy.log('Taking screenshot of:' + glamoururls[i])
+            cy.eyesCheckWindow({
+                target: 'window',
+                fully: true
+            })
+            cy.eyesClose();
+        }
+    })
+    it(`Should take a full page screenshot of GQ URLs`, () => {
+        for(let i=0; i<gqurls.length; i++){
+            cy.eyesOpen({
+                appName: 'CondeNast-POC',
+                testName: gqurls[i]
+
+            });
+            cy.visit(gqurls[i]);
+            cy.wait(5000)
+            cy.log('Taking screenshot of:' + gqurls[i])
             cy.eyesCheckWindow({
                 target: 'window',
                 fully: true
