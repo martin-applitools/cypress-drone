@@ -83,6 +83,19 @@ const lennyletterurls = [
     'https://www.lennyletter.com/contributor/lena-dunham',
     'https://pitchfork.com/news/david-bowie-documentary-the-first-five-years-announced/',
     ]
+const selfurls = [
+    'https://www.self.com/',
+    'https://www.self.com/contributor/jackie-newgent',
+    'https://www.self.com/contributor/jenn-sinrich',
+    'https://www.self.com/gallery/6-high-protein-meals-that-only-need-5-ingredients',
+    'https://www.self.com/gallery/coconut-milk-recipes',
+    'https://www.self.com/gallery/dumbbell-exercises-that-work-your-core',
+    // 'https://www.self.com/sponsored/article/native-article-test-single-column',
+    // 'https://www.self.com/sponsored/gallery/native-gallery-product-gallery',
+    'https://www.self.com/story/plant-based-ramadan-meal-plan',
+    'https://www.self.com/story/what-it-means-to-be-black-in-fitness',
+    'https://www.self.com/video/watch/surfers-try-to-keep-up-with-snowboarders'
+    ]
 describe('Should Visually Validate CondeNast Brand Sites', () => {
     it(`Should take a full page screenshot of Allure URLs`, () => {
             for(let i=0; i<allureurls.length; i++){
@@ -216,6 +229,23 @@ describe('Should Visually Validate CondeNast Brand Sites', () => {
             cy.visit(lennyletterurls[i]);
             cy.wait(5000)
             cy.log('Taking screenshot of:' + lennyletterurls[i])
+            cy.eyesCheckWindow({
+                target: 'window',
+                fully: true
+            })
+            cy.eyesClose();
+        }
+    })
+    it(`Should take a full page screenshot of Self URLs`, () => {
+        for(let i=0; i<selfurls.length; i++){
+            cy.eyesOpen({
+                appName: 'CondeNast-POC',
+                testName: selfurls[i]
+
+            });
+            cy.visit(selfurls[i]);
+            cy.wait(5000)
+            cy.log('Taking screenshot of:' + selfurls[i])
             cy.eyesCheckWindow({
                 target: 'window',
                 fully: true
