@@ -130,7 +130,47 @@ const themurls = [
     // 'https://www.them.us/verso-homepage/homepage',
     'https://www.them.us/video/watch/first-person-episode-3'
     ]
-const urls = [
+const vanityfairurls = [
+    'https://www.vanityfair.com/',
+    'https://www.vanityfair.com/hollywood/2019/05/game-of-thrones-season-8-episode-4-photos-varys-spymaster-targaryen-stark-schism',
+    'https://www.vanityfair.com/hollywood/2019/10/emilia-clarke-jason-momoa-kit-harington-thrones-reunion',
+    // 'https://www.vanityfair.com/sponsored/article/native-article-test-paid-post',
+    // 'https://www.vanityfair.com/sponsored/gallery/native-gallery-product-gallery',
+    'https://www.vanityfair.com/watch/reviews-john-dimaggio-futuramas-bender-reviews-impressions-of-his-voices'
+    ]
+const vogueurls = [
+    'https://www.vogue.com/',
+    'https://www.vogue.com/article/kylie-jenner-stopped-by-the-dreamiest-hotel-on-the-amalfi-coast',
+    'https://www.vogue.com/contributor/liana-satenstein',
+    'https://www.vogue.com/contributor/madeline-fass',
+    'https://www.vogue.com/contributor/nicole-phelps',
+    'https://www.vogue.com/fashion',
+    'https://www.vogue.com/fashion-shows',
+    'https://www.vogue.com/fashion-shows/designer/chanel',
+    'https://www.vogue.com/fashion-shows/resort-2021/tanya-taylor',
+    'https://www.vogue.com/fashion/celebrity-style',
+    'https://www.vogue.com/shopping',
+    'https://www.vogue.com/shopping/fashion',
+    'https://www.vogue.com/slideshow/hairstylist-nigella-miller-on-her-wash-and-go-routine-speaking-up-and-expanding-her-hair-accessories-brand',
+    'https://www.vogue.com/slideshow/happy-49th-birthday-naomi-campbell-a-look-back-at-the-muses-iconic-beauty-moments',
+    'https://www.vogue.com/sponsored/article/blingby-native-with-rail',
+    //'https://www.vogue.com/sponsored/gallery/native-gallery-product-gallery',
+    'https://www.vogue.com/travel-via-cinema',
+    'https://www.vogue.com/video/watch/73-questions-with-dan-levy'
+    ]
+const wiredurls = [
+    'https://www.wired.com/',
+    'https://www.wired.com/account/sign-in',
+    'https://www.wired.com/account/sign-up',
+    'https://www.wired.com/gallery/apollo-11-best-gear-moon/',
+    'https://www.wired.com/gallery/best-android-phones/',
+    'https://www.wired.com/gallery/gifts-for-runners/',
+    'https://www.wired.com/gallery/gifts-for-the-world-traveler/',
+    'https://www.wired.com/review/review-amazon-fire-hd-8-kids-edition/',
+    'https://www.wired.com/sponsored/story/as-the-us-and-china-race-toward-a-technology-cold-war-what-will-keep-the-peace/',
+    'https://www.wired.com/story/beauty-madness-sending-man-moon/',
+    'https://www.wired.com/story/coronavirus-covid-19-asmr/',
+    'https://www.wired.com/video/watch/each-and-every-every-dog-breed-explained-part-2'
     ]
 describe('Should Visually Validate CondeNast Brand Sites', () => {
     it(`Should take a full page screenshot of Allure URLs`, () => {
@@ -350,6 +390,57 @@ describe('Should Visually Validate CondeNast Brand Sites', () => {
             cy.visit(themurls[i]);
             cy.wait(5000)
             cy.log('Taking screenshot of:' + themurls[i])
+            cy.eyesCheckWindow({
+                target: 'window',
+                fully: true
+            })
+            cy.eyesClose();
+        }
+    })
+    it(`Should take a full page screenshot of Vanity Fair URLs`, () => {
+        for(let i=0; i<vanityfairurls.length; i++){
+            cy.eyesOpen({
+                appName: 'CondeNast-POC',
+                testName: vanityfairurls[i]
+
+            });
+            cy.visit(vanityfairurls[i]);
+            cy.wait(5000)
+            cy.log('Taking screenshot of:' + vanityfairurls[i])
+            cy.eyesCheckWindow({
+                target: 'window',
+                fully: true
+            })
+            cy.eyesClose();
+        }
+    })
+    it(`Should take a full page screenshot of Vogue URLs`, () => {
+        for(let i=0; i<vogueurls.length; i++){
+            cy.eyesOpen({
+                appName: 'CondeNast-POC',
+                testName: vogueurls[i]
+
+            });
+            cy.visit(vogueurls[i]);
+            cy.wait(5000)
+            cy.log('Taking screenshot of:' + vogueurls[i])
+            cy.eyesCheckWindow({
+                target: 'window',
+                fully: true
+            })
+            cy.eyesClose();
+        }
+    })
+    it(`Should take a full page screenshot of Wired URLs`, () => {
+        for(let i=0; i<wiredurls.length; i++){
+            cy.eyesOpen({
+                appName: 'CondeNast-POC',
+                testName: wiredurls[i]
+
+            });
+            cy.visit(wiredurls[i]);
+            cy.wait(5000)
+            cy.log('Taking screenshot of:' + wiredurls[i])
             cy.eyesCheckWindow({
                 target: 'window',
                 fully: true
