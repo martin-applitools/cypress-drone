@@ -108,6 +108,19 @@ const teenvogueurls = [
     'https://www.teenvogue.com/verso-homepage/homepage',
     'https://www.teenvogue.com/video/watch/casey-cott-reviews-riverdale-memes',
     ]
+const thenewyorkerurls = [
+    'https://www.newyorker.com/',
+    'https://www.newyorker.com/account/sign-up',
+    'https://www.newyorker.com/cartoon/a22400',
+    'https://www.newyorker.com/cartoons/daily-cartoon/thursday-august-22nd-chosen-one',
+    'https://www.newyorker.com/cartoons/issue-cartoons/cartoons-from-the-november-11-2019-issue',
+    'https://www.newyorker.com/culture/the-new-yorker-interview/if-youre-in-the-song-keep-on-playing-pharoah-sanders-interview',
+    'https://www.newyorker.com/magazine/2019/06/10/the-children',
+    'https://www.newyorker.com/magazine/2019/10/07/todd-phillips-joker-is-no-laughing-matter',
+    'https://www.newyorker.com/puzzles-and-games-dept/crossword/2019/05/13',
+    //'https://www.newyorker.com/sponsored/story/test-test',
+    'https://www.newyorker.com/video/watch/obsessions-how-does-a-plant-grow-without-soil'
+    ]
 describe('Should Visually Validate CondeNast Brand Sites', () => {
     it(`Should take a full page screenshot of Allure URLs`, () => {
             for(let i=0; i<allureurls.length; i++){
@@ -292,6 +305,23 @@ describe('Should Visually Validate CondeNast Brand Sites', () => {
             cy.visit(teenvogueurls[i]);
             cy.wait(5000)
             cy.log('Taking screenshot of:' + teenvogueurls[i])
+            cy.eyesCheckWindow({
+                target: 'window',
+                fully: true
+            })
+            cy.eyesClose();
+        }
+    })
+    it(`Should take a full page screenshot of The New Yorker URLs`, () => {
+        for(let i=0; i<thenewyorkerurls.length; i++){
+            cy.eyesOpen({
+                appName: 'CondeNast-POC',
+                testName: thenewyorkerurls[i]
+
+            });
+            cy.visit(thenewyorkerurls[i]);
+            cy.wait(5000)
+            cy.log('Taking screenshot of:' + thenewyorkerurls[i])
             cy.eyesCheckWindow({
                 target: 'window',
                 fully: true
