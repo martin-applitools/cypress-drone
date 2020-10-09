@@ -1,6 +1,6 @@
 
 /// <reference types="@applitools/eyes-cypress" />
-const urls = ['https://www.allure.com/account/sign-in',
+const allureurls = ['https://www.allure.com/account/sign-in',
     'https://www.allure.com/account/sign-up',
     'https://www.allure.com/gallery/best-body-washes',
     'https://www.allure.com/gallery/readers-choice-skin-care-product-winners',
@@ -12,7 +12,8 @@ const urls = ['https://www.allure.com/account/sign-in',
     'https://www.allure.com/story/wear-orange-national-gun-violence-awareness-day',
     'https://www.allure.com/topic/love',
     'https://www.allure.com/video/watch/jessica-alba-organic-vanilla-sugar-body-scrub',
-    'https://www.allure.com/branded/article/alr/allure-editor-in-chief-michelle-lee-jbeauty-tokyo',
+    'https://www.allure.com/branded/article/alr/allure-editor-in-chief-michelle-lee-jbeauty-tokyo']
+const architectureurls = [
     'https://www.architecturaldigest.com/',
     'https://www.architecturaldigest.com/clever',
     'https://www.architecturaldigest.com/clever/conversation',
@@ -27,16 +28,16 @@ const urls = ['https://www.allure.com/account/sign-in',
     'https://www.architecturaldigest.com/video/watch/open-door-open-door-kitchens-supercut'
     ]
 describe('Should Visually Validate Conde Nast WebSite and Brands', () => {
-    it(`Should take a full page screenshot of URL`, () => {
-            for(let i=0; i<urls.length; i++){
+    it(`Should take a full page screenshot of Allure URLs`, () => {
+            for(let i=0; i<allureurls.length; i++){
                 cy.eyesOpen({
                     appName: 'CondeNast-POC',
-                    testName: urls[i]
+                    testName: allureurls[i]
 
                 });
-                cy.visit(urls[i]);
+                cy.visit(allureurls[i]);
                 cy.wait(5000)
-                cy.log('Taking screenshot of:' + urls[i])
+                cy.log('Taking screenshot of:' + allureurls[i])
                 cy.eyesCheckWindow({
                      target: 'window',
                      fully: true
@@ -45,4 +46,22 @@ describe('Should Visually Validate Conde Nast WebSite and Brands', () => {
             }
 
         });
+    it(`Should take a full page screenshot of Architecture Digest URLs`, () => {
+        for(let i=0; i<architectureurls.length; i++){
+            cy.eyesOpen({
+                appName: 'CondeNast-POC',
+                testName: architectureurls[i]
+
+            });
+            cy.visit(architectureurls[i]);
+            cy.wait(5000)
+            cy.log('Taking screenshot of:' + architectureurls[i])
+            cy.eyesCheckWindow({
+                target: 'window',
+                fully: true
+            })
+            cy.eyesClose();
+        }
+
+    });
 });
