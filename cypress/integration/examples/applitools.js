@@ -117,9 +117,20 @@ const thenewyorkerurls = [
     'https://www.newyorker.com/culture/the-new-yorker-interview/if-youre-in-the-song-keep-on-playing-pharoah-sanders-interview',
     'https://www.newyorker.com/magazine/2019/06/10/the-children',
     //'https://www.newyorker.com/magazine/2019/10/07/todd-phillips-joker-is-no-laughing-matter',
-    'https://www.newyorker.com/puzzles-and-games-dept/crossword/2019/05/13',
+    //'https://www.newyorker.com/puzzles-and-games-dept/crossword/2019/05/13',
     //'https://www.newyorker.com/sponsored/story/test-test',
     'https://www.newyorker.com/video/watch/obsessions-how-does-a-plant-grow-without-soil'
+    ]
+const themurls = [
+    'https://www.them.us/',
+    // 'https://www.them.us/sponsored/gallery/native-gallery-product-gallery',
+    'https://www.them.us/sponsored/story/we-went-live-with-indya-moore-to-talk-about-black-trans-liberation',
+    'https://www.them.us/story/cynthia-nixon-is-the-politician-we-need',
+    'https://www.them.us/story/jodie-comer-season-3-killing-eve',
+    // 'https://www.them.us/verso-homepage/homepage',
+    'https://www.them.us/video/watch/first-person-episode-3'
+    ]
+const urls = [
     ]
 describe('Should Visually Validate CondeNast Brand Sites', () => {
     it(`Should take a full page screenshot of Allure URLs`, () => {
@@ -322,6 +333,23 @@ describe('Should Visually Validate CondeNast Brand Sites', () => {
             cy.visit(thenewyorkerurls[i]);
             cy.wait(5000)
             cy.log('Taking screenshot of:' + thenewyorkerurls[i])
+            cy.eyesCheckWindow({
+                target: 'window',
+                fully: true
+            })
+            cy.eyesClose();
+        }
+    })
+    it(`Should take a full page screenshot of Them URLs`, () => {
+        for(let i=0; i<themurls.length; i++){
+            cy.eyesOpen({
+                appName: 'CondeNast-POC',
+                testName: themurls[i]
+
+            });
+            cy.visit(themurls[i]);
+            cy.wait(5000)
+            cy.log('Taking screenshot of:' + themurls[i])
             cy.eyesCheckWindow({
                 target: 'window',
                 fully: true
