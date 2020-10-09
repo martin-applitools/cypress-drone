@@ -80,9 +80,11 @@ const gqurls = [
 const lennyletterurls = [
     'https://www.lennyletter.com/',
     'https://www.lennyletter.com/contributor/kesha',
-    'https://www.lennyletter.com/contributor/lena-dunham',
-    'https://pitchfork.com/news/david-bowie-documentary-the-first-five-years-announced/',
+    'https://www.lennyletter.com/contributor/lena-dunham'
     ]
+const pitchforkurls = [
+    'https://pitchfork.com/news/david-bowie-documentary-the-first-five-years-announced/',
+]
 const selfurls = [
     'https://www.self.com/',
     'https://www.self.com/contributor/jackie-newgent',
@@ -95,6 +97,16 @@ const selfurls = [
     'https://www.self.com/story/plant-based-ramadan-meal-plan',
     'https://www.self.com/story/what-it-means-to-be-black-in-fitness',
     'https://www.self.com/video/watch/surfers-try-to-keep-up-with-snowboarders'
+    ]
+const teenvogueurls = [
+    'https://www.teenvogue.com/',
+    'https://www.teenvogue.com/gallery/the-best-lipstick-shades-to-wear-this-halloween-and-how-to-do-it',
+    'https://www.teenvogue.com/gallery/your-perfect-dress-for-prom-is-right-here',
+    // 'https://www.teenvogue.com/sponsored/gallery/native-gallery-product-gallery',
+    'https://www.teenvogue.com/sponsored/story/20-silver-linings-to-virtual-prom',
+    'https://www.teenvogue.com/tag/love',
+    'https://www.teenvogue.com/verso-homepage/homepage',
+    'https://www.teenvogue.com/video/watch/casey-cott-reviews-riverdale-memes',
     ]
 describe('Should Visually Validate CondeNast Brand Sites', () => {
     it(`Should take a full page screenshot of Allure URLs`, () => {
@@ -236,6 +248,23 @@ describe('Should Visually Validate CondeNast Brand Sites', () => {
             cy.eyesClose();
         }
     })
+    it(`Should take a full page screenshot of Pitchfork URLs`, () => {
+        for(let i=0; i<pitchforkurls.length; i++){
+            cy.eyesOpen({
+                appName: 'CondeNast-POC',
+                testName: pitchforkurls[i]
+
+            });
+            cy.visit(pitchforkurls[i]);
+            cy.wait(5000)
+            cy.log('Taking screenshot of:' + pitchforkurls[i])
+            cy.eyesCheckWindow({
+                target: 'window',
+                fully: true
+            })
+            cy.eyesClose();
+        }
+    })
     it(`Should take a full page screenshot of Self URLs`, () => {
         for(let i=0; i<selfurls.length; i++){
             cy.eyesOpen({
@@ -246,6 +275,23 @@ describe('Should Visually Validate CondeNast Brand Sites', () => {
             cy.visit(selfurls[i]);
             cy.wait(5000)
             cy.log('Taking screenshot of:' + selfurls[i])
+            cy.eyesCheckWindow({
+                target: 'window',
+                fully: true
+            })
+            cy.eyesClose();
+        }
+    })
+    it(`Should take a full page screenshot of Teen Vogue URLs`, () => {
+        for(let i=0; i<teenvogueurls.length; i++){
+            cy.eyesOpen({
+                appName: 'CondeNast-POC',
+                testName: teenvogueurls[i]
+
+            });
+            cy.visit(teenvogueurls[i]);
+            cy.wait(5000)
+            cy.log('Taking screenshot of:' + teenvogueurls[i])
             cy.eyesCheckWindow({
                 target: 'window',
                 fully: true
