@@ -27,6 +27,15 @@ const architectureurls = [
     'https://www.architecturaldigest.com/sponsored/story/sasha-bikoffs-secrets-to-throwing-the-perfect-party',
     'https://www.architecturaldigest.com/video/watch/open-door-open-door-kitchens-supercut'
     ]
+const bonappetiturls = [
+    'https://www.bonappetit.com/gallery/phoebe-robinson',
+    //'https://www.bonappetit.com/sponsored/article/native-article-test-sponsored-content-by-text-healthyish',
+    //'https://www.bonappetit.com/sponsored/gallery/native-gallery-product-gallery',
+    'https://www.bonappetit.com/story/best-japanese-restaurants-seattle',
+    'https://www.bonappetit.com/story/chicago-hot-dog-taste-test',
+    'https://www.bonappetit.com/story/food-lovers-guide-eating-budget',
+    'https://www.bonappetit.com/video/watch/it-s-alive-with-brad-brad-makes-pickled-onions-at-home'
+]
 describe('Should Visually Validate CondeNast Brand Sites', () => {
     it(`Should take a full page screenshot of Allure URLs`, () => {
             for(let i=0; i<allureurls.length; i++){
@@ -64,4 +73,22 @@ describe('Should Visually Validate CondeNast Brand Sites', () => {
         }
 
     });
+    it(`Should take a full page screenshot of BonAppetit URLs`, () => {
+        for(let i=0; i<bonappetiturls.length; i++){
+            cy.eyesOpen({
+                appName: 'CondeNast-POC',
+                testName: bonappetiturls[i]
+
+            });
+            cy.visit(bonappetiturls[i]);
+            cy.wait(5000)
+            cy.log('Taking screenshot of:' + bonappetiturls[i])
+            cy.eyesCheckWindow({
+                target: 'window',
+                fully: true
+            })
+            cy.eyesClose();
+        }
+
+    })
 });
