@@ -77,6 +77,12 @@ const gqurls = [
     'https://www.gq.com/video/watch/above-average-joe-episode-1',
     'https://www.gq.com/wellness'
     ]
+const lennyletterurls = [
+    'https://www.lennyletter.com/',
+    'https://www.lennyletter.com/contributor/kesha',
+    'https://www.lennyletter.com/contributor/lena-dunham',
+    'https://pitchfork.com/news/david-bowie-documentary-the-first-five-years-announced/',
+    ]
 describe('Should Visually Validate CondeNast Brand Sites', () => {
     it(`Should take a full page screenshot of Allure URLs`, () => {
             for(let i=0; i<allureurls.length; i++){
@@ -193,6 +199,23 @@ describe('Should Visually Validate CondeNast Brand Sites', () => {
             cy.visit(gqurls[i]);
             cy.wait(5000)
             cy.log('Taking screenshot of:' + gqurls[i])
+            cy.eyesCheckWindow({
+                target: 'window',
+                fully: true
+            })
+            cy.eyesClose();
+        }
+    })
+    it(`Should take a full page screenshot of LennyLetter URLs`, () => {
+        for(let i=0; i<lennyletterurls.length; i++){
+            cy.eyesOpen({
+                appName: 'CondeNast-POC',
+                testName: lennyletterurls[i]
+
+            });
+            cy.visit(lennyletterurls[i]);
+            cy.wait(5000)
+            cy.log('Taking screenshot of:' + lennyletterurls[i])
             cy.eyesCheckWindow({
                 target: 'window',
                 fully: true
