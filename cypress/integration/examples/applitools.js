@@ -52,7 +52,7 @@ const epiccuriousurls = [
 const glamoururls = [
     'https://www.glamour.com/',
     'https://www.glamour.com/about/hayden-panettiere',
-    'https://www.glamour.com/glamour/about/love',
+    //'https://www.glamour.com/glamour/about/love',
     'https://www.glamour.com/gallery/10-jackets-every-woman-should-own',
     'https://www.glamour.com/gallery/best-curly-hair-products',
     'https://www.glamour.com/gallery/ulta-beauty-fall-haul-sale',
@@ -63,6 +63,9 @@ const glamoururls = [
     'https://www.glamour.com/story/glamour-beauty-awards-readers-choice-vote',
     'https://www.glamour.com/story/sophie-turner-dickies-t-shirt-mango-mules',
     'https://www.glamour.com/video/watch/p-nk-watches-fan-covers-on-youtube'
+    ]
+const gqurls = [
+    '',
     ]
 describe('Should Visually Validate CondeNast Brand Sites', () => {
     it(`Should take a full page screenshot of Allure URLs`, () => {
