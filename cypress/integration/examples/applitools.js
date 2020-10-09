@@ -174,10 +174,10 @@ const wiredurls = [
     ]
 // const scenarioList = [allureurls, architectureurls, bonappetiturls, travelerurls, epiccuriousurls, glamoururls, gqurls, lennyletterurls, pitchforkurls, selfurls,
 //     teenvogueurls, thenewyorkerurls, themurls, vanityfairurls, vogueurls, wiredurls]
-const scenarioList = [allureurls, architectureurls]
+const scenarioList = [{"Allure Urls": allureurls, "Architecture Digest":architectureurls}]
 describe('Should Visually Validate CondeNast Brand Sites', () => {
     for (let s=0; s<scenarioList.length; s++) {
-        it('Should take a full page screenshot ' + scenarioList.values()[s], () => {
+        it('Should take a full page screenshot ' + scenarioList[s].keys(), () => {
             for(let i=0; i<scenarioList[s].length; i++){
                 cy.eyesOpen({
                     appName: 'CondeNast-POC',
