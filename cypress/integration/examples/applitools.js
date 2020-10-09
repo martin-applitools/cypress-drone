@@ -177,7 +177,7 @@ const wiredurls = [
 const scenarioList = [allureurls, architectureurls]
 describe('Should Visually Validate CondeNast Brand Sites', () => {
     for (let s=0; s<scenarioList.length; s++) {
-        it('Should take a full page screenshot ' + this.scenarioList[s], () => {
+        it('Should take a full page screenshot ' + scenarioList.values()[s], () => {
             for(let i=0; i<scenarioList[s].length; i++){
                 cy.eyesOpen({
                     appName: 'CondeNast-POC',
