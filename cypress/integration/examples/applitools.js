@@ -1,6 +1,6 @@
 
 /// <reference types="@applitools/eyes-cypress" />
-const allureurls = ['https://www.allure.com/account/sign-in',
+const urls = ['https://www.allure.com/account/sign-in',
     'https://www.allure.com/account/sign-up',
     'https://www.allure.com/gallery/best-body-washes',
     'https://www.allure.com/gallery/readers-choice-skin-care-product-winners',
@@ -12,19 +12,31 @@ const allureurls = ['https://www.allure.com/account/sign-in',
     'https://www.allure.com/story/wear-orange-national-gun-violence-awareness-day',
     'https://www.allure.com/topic/love',
     'https://www.allure.com/video/watch/jessica-alba-organic-vanilla-sugar-body-scrub',
-    'https://www.allure.com/branded/article/alr/allure-editor-in-chief-michelle-lee-jbeauty-tokyo'
+    'https://www.allure.com/branded/article/alr/allure-editor-in-chief-michelle-lee-jbeauty-tokyo',
+    'https://www.architecturaldigest.com/',
+    'https://www.architecturaldigest.com/clever',
+    'https://www.architecturaldigest.com//clever/conversation',
+    'https://www.architecturaldigest.com//clever/decoration',
+    'https://www.architecturaldigest.com//clever/renovation',
+    'https://www.architecturaldigest.com//clever/shopping',
+    'https://www.architecturaldigest.com/event/paris-design-week-2020',
+    'https://www.architecturaldigest.com//events',
+    'https://www.architecturaldigest.com/gallery/2020-geneva-motor-show-canceled-forcing-automakers-unveil-cars-online',
+    'https://www.architecturaldigest.com//sponsored/gallery/native-gallery-product-gallery',
+    'https://www.architecturaldigest.com//sponsored/story/sasha-bikoffs-secrets-to-throwing-the-perfect-party',
+    'https://www.architecturaldigest.com//video/watch/open-door-open-door-kitchens-supercut'
     ]
 describe('Should Visually Validate Conde Nast WebSite and Brands', () => {
     it(`Should take a full page screenshot of URL`, () => {
-            for(let i=0; i<allureurls.length; i++){
+            for(let i=0; i<urls.length; i++){
                 cy.eyesOpen({
                     appName: 'CondeNast-POC',
-                    testName: allureurls[i]
+                    testName: urls[i]
 
                 });
-                cy.visit(allureurls[i]);
+                cy.visit(urls[i]);
                 cy.wait(5000)
-                cy.log('Taking screenshot of:' + allureurls[i])
+                cy.log('Taking screenshot of:' + urls[i])
                 cy.eyesCheckWindow({
                      target: 'window',
                      fully: true
