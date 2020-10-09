@@ -15,16 +15,16 @@ const urls = ['https://www.allure.com/account/sign-in',
     'https://www.allure.com/branded/article/alr/allure-editor-in-chief-michelle-lee-jbeauty-tokyo',
     'https://www.architecturaldigest.com/',
     'https://www.architecturaldigest.com/clever',
-    'https://www.architecturaldigest.com//clever/conversation',
-    'https://www.architecturaldigest.com//clever/decoration',
-    'https://www.architecturaldigest.com//clever/renovation',
-    'https://www.architecturaldigest.com//clever/shopping',
+    'https://www.architecturaldigest.com/clever/conversation',
+    'https://www.architecturaldigest.com/clever/decoration',
+    'https://www.architecturaldigest.com/clever/renovation',
+    'https://www.architecturaldigest.com/clever/shopping',
     'https://www.architecturaldigest.com/event/paris-design-week-2020',
-    'https://www.architecturaldigest.com//events',
+    'https://www.architecturaldigest.com/events',
     'https://www.architecturaldigest.com/gallery/2020-geneva-motor-show-canceled-forcing-automakers-unveil-cars-online',
-    'https://www.architecturaldigest.com//sponsored/gallery/native-gallery-product-gallery',
-    'https://www.architecturaldigest.com//sponsored/story/sasha-bikoffs-secrets-to-throwing-the-perfect-party',
-    'https://www.architecturaldigest.com//video/watch/open-door-open-door-kitchens-supercut'
+    'https://www.architecturaldigest.com/sponsored/gallery/native-gallery-product-gallery',
+    'https://www.architecturaldigest.com/sponsored/story/sasha-bikoffs-secrets-to-throwing-the-perfect-party',
+    'https://www.architecturaldigest.com/video/watch/open-door-open-door-kitchens-supercut'
     ]
 describe('Should Visually Validate Conde Nast WebSite and Brands', () => {
     it(`Should take a full page screenshot of URL`, () => {
