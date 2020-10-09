@@ -38,7 +38,7 @@ const bonappetiturls = [
     ]
 const travelerurls = [
     'https://www.cntraveler.com/',
-    'https://www.cntraveler.com/the-10-best-countries-for-expats',
+    //'https://www.cntraveler.com/the-10-best-countries-for-expats',
     //'https://www.cntraveler.com/sponsored/story/testingnativearticle',
     'https://www.cntraveler.com/story/our-favorite-new-yorkers-on-the-best-things-in-all-five-boroughs',
     'https://www.cntraveler.com/video/watch/cnt-shorties-the-2016-shorties-film-festival'
@@ -49,6 +49,21 @@ const epiccuriousurls = [
     //'https://www.epicurious.com/gallery/native-gallery-product-gallery',
     'https://www.epicurious.com/video/watch/kids-try-burgers-from-10-states',
 ]
+const glamoururls = [
+    'https://www.glamour.com/',
+    'https://www.glamour.com/about/hayden-panettiere',
+    'https://www.glamour.com/glamour/about/love',
+    'https://www.glamour.com/gallery/10-jackets-every-woman-should-own',
+    'https://www.glamour.com/gallery/best-curly-hair-products',
+    'https://www.glamour.com/gallery/ulta-beauty-fall-haul-sale',
+    //'https://www.glamour.com/sponsored/story/affiliate-enabled',
+    //'https://www.glamour.com/sponsored/story/native-article-test-enable-publish-date',
+    'https://www.glamour.com/story/beauty-awards',
+    'https://www.glamour.com/story/game-changers-sports',
+    'https://www.glamour.com/story/glamour-beauty-awards-readers-choice-vote',
+    'https://www.glamour.com/story/sophie-turner-dickies-t-shirt-mango-mules',
+    'https://www.glamour.com/video/watch/p-nk-watches-fan-covers-on-youtube'
+    ]
 describe('Should Visually Validate CondeNast Brand Sites', () => {
     it(`Should take a full page screenshot of Allure URLs`, () => {
             for(let i=0; i<allureurls.length; i++){
@@ -131,6 +146,23 @@ describe('Should Visually Validate CondeNast Brand Sites', () => {
             cy.visit(epiccuriousurls[i]);
             cy.wait(5000)
             cy.log('Taking screenshot of:' + epiccuriousurls[i])
+            cy.eyesCheckWindow({
+                target: 'window',
+                fully: true
+            })
+            cy.eyesClose();
+        }
+    })
+    it(`Should take a full page screenshot of Glamour URLs`, () => {
+        for(let i=0; i<glamoururls.length; i++){
+            cy.eyesOpen({
+                appName: 'CondeNast-POC',
+                testName: glamoururls[i]
+
+            });
+            cy.visit(glamoururls[i]);
+            cy.wait(5000)
+            cy.log('Taking screenshot of:' + glamoururls[i])
             cy.eyesCheckWindow({
                 target: 'window',
                 fully: true
