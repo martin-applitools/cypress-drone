@@ -27,6 +27,28 @@ const architectureurls = [
     'https://www.architecturaldigest.com/sponsored/story/sasha-bikoffs-secrets-to-throwing-the-perfect-party',
     'https://www.architecturaldigest.com/video/watch/open-door-open-door-kitchens-supercut'
     ]
+const bonappetiturls = [
+    'https://www.bonappetit.com/gallery/phoebe-robinson',
+    //'https://www.bonappetit.com/sponsored/article/native-article-test-sponsored-content-by-text-healthyish',
+    //'https://www.bonappetit.com/sponsored/gallery/native-gallery-product-gallery',
+    'https://www.bonappetit.com/story/best-japanese-restaurants-seattle',
+    'https://www.bonappetit.com/story/chicago-hot-dog-taste-test',
+    'https://www.bonappetit.com/story/food-lovers-guide-eating-budget',
+    'https://www.bonappetit.com/video/watch/it-s-alive-with-brad-brad-makes-pickled-onions-at-home'
+    ]
+const travelerurls = [
+    'https://www.cntraveler.com/',
+    'https://www.cntraveler.com/the-10-best-countries-for-expats',
+    //'https://www.cntraveler.com/sponsored/story/testingnativearticle',
+    'https://www.cntraveler.com/story/our-favorite-new-yorkers-on-the-best-things-in-all-five-boroughs',
+    'https://www.cntraveler.com/video/watch/cnt-shorties-the-2016-shorties-film-festival'
+    ]
+const epiccuriousurls = [
+    'https://www.epicurious.com/',
+    //'https://www.epicurious.com/sponsored/article/native-article-test-paid-post',
+    //'https://www.epicurious.com/gallery/native-gallery-product-gallery',
+    'https://www.epicurious.com/video/watch/kids-try-burgers-from-10-states',
+]
 describe('Should Visually Validate CondeNast Brand Sites', () => {
     it(`Should take a full page screenshot of Allure URLs`, () => {
             for(let i=0; i<allureurls.length; i++){
@@ -64,4 +86,56 @@ describe('Should Visually Validate CondeNast Brand Sites', () => {
         }
 
     });
+    it(`Should take a full page screenshot of BonAppetit URLs`, () => {
+        for(let i=0; i<bonappetiturls.length; i++){
+            cy.eyesOpen({
+                appName: 'CondeNast-POC',
+                testName: bonappetiturls[i]
+
+            });
+            cy.visit(bonappetiturls[i]);
+            cy.wait(5000)
+            cy.log('Taking screenshot of:' + bonappetiturls[i])
+            cy.eyesCheckWindow({
+                target: 'window',
+                fully: true
+            })
+            cy.eyesClose();
+        }
+
+    })
+    it(`Should take a full page screenshot of CondeNast Traveler URLs`, () => {
+        for(let i=0; i<travelerurls.length; i++){
+            cy.eyesOpen({
+                appName: 'CondeNast-POC',
+                testName: travelerurls[i]
+
+            });
+            cy.visit(travelerurls[i]);
+            cy.wait(5000)
+            cy.log('Taking screenshot of:' + travelerurls[i])
+            cy.eyesCheckWindow({
+                target: 'window',
+                fully: true
+            })
+            cy.eyesClose();
+        }
+    })
+    it(`Should take a full page screenshot of Epic Curious URLs`, () => {
+        for(let i=0; i<epiccuriousurls.length; i++){
+            cy.eyesOpen({
+                appName: 'CondeNast-POC',
+                testName: epiccuriousurls[i]
+
+            });
+            cy.visit(epiccuriousurls[i]);
+            cy.wait(5000)
+            cy.log('Taking screenshot of:' + epiccuriousurls[i])
+            cy.eyesCheckWindow({
+                target: 'window',
+                fully: true
+            })
+            cy.eyesClose();
+        }
+    })
 });
