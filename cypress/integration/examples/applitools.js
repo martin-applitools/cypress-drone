@@ -136,7 +136,7 @@ const vanityfairurls = [
     'https://www.vanityfair.com/hollywood/2019/10/emilia-clarke-jason-momoa-kit-harington-thrones-reunion',
     // 'https://www.vanityfair.com/sponsored/article/native-article-test-paid-post',
     // 'https://www.vanityfair.com/sponsored/gallery/native-gallery-product-gallery',
-    'https://www.vanityfair.com/watch/reviews-john-dimaggio-futuramas-bender-reviews-impressions-of-his-voices'
+    //'https://www.vanityfair.com/watch/reviews-john-dimaggio-futuramas-bender-reviews-impressions-of-his-voices'
     ]
 const vogueurls = [
     'https://www.vogue.com/',
@@ -153,7 +153,7 @@ const vogueurls = [
     'https://www.vogue.com/shopping/fashion',
     'https://www.vogue.com/slideshow/hairstylist-nigella-miller-on-her-wash-and-go-routine-speaking-up-and-expanding-her-hair-accessories-brand',
     'https://www.vogue.com/slideshow/happy-49th-birthday-naomi-campbell-a-look-back-at-the-muses-iconic-beauty-moments',
-    'https://www.vogue.com/sponsored/article/blingby-native-with-rail',
+    //'https://www.vogue.com/sponsored/article/blingby-native-with-rail',
     //'https://www.vogue.com/sponsored/gallery/native-gallery-product-gallery',
     'https://www.vogue.com/travel-via-cinema',
     'https://www.vogue.com/video/watch/73-questions-with-dan-levy'
@@ -169,7 +169,7 @@ const wiredurls = [
     'https://www.wired.com/review/review-amazon-fire-hd-8-kids-edition/',
     'https://www.wired.com/sponsored/story/as-the-us-and-china-race-toward-a-technology-cold-war-what-will-keep-the-peace/',
     'https://www.wired.com/story/beauty-madness-sending-man-moon/',
-    'https://www.wired.com/story/coronavirus-covid-19-asmr/',
+    //'https://www.wired.com/story/coronavirus-covid-19-asmr/',
     'https://www.wired.com/video/watch/each-and-every-every-dog-breed-explained-part-2'
     ]
 describe('Should Visually Validate CondeNast Brand Sites', () => {
