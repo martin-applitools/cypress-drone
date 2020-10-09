@@ -38,11 +38,17 @@ const bonappetiturls = [
     ]
 const travelerurls = [
     'https://www.cntraveler.com/',
-    'https://www.cntraveler.com//the-10-best-countries-for-expats',
+    'https://www.cntraveler.com/the-10-best-countries-for-expats',
     //'https://www.cntraveler.com/sponsored/story/testingnativearticle',
     'https://www.cntraveler.com/story/our-favorite-new-yorkers-on-the-best-things-in-all-five-boroughs',
     'https://www.cntraveler.com/video/watch/cnt-shorties-the-2016-shorties-film-festival'
     ]
+const epiccuriousurls = [
+    'https://www.epicurious.com/',
+    //'https://www.epicurious.com/sponsored/article/native-article-test-paid-post',
+    //'https://www.epicurious.com/gallery/native-gallery-product-gallery',
+    'https://www.epicurious.com/video/watch/kids-try-burgers-from-10-states',
+]
 describe('Should Visually Validate CondeNast Brand Sites', () => {
     it(`Should take a full page screenshot of Allure URLs`, () => {
             for(let i=0; i<allureurls.length; i++){
@@ -114,6 +120,22 @@ describe('Should Visually Validate CondeNast Brand Sites', () => {
             })
             cy.eyesClose();
         }
+    })
+    it(`Should take a full page screenshot of Epic Curious URLs`, () => {
+        for(let i=0; i<epiccuriousurls.length; i++){
+            cy.eyesOpen({
+                appName: 'CondeNast-POC',
+                testName: epiccuriousurls[i]
 
+            });
+            cy.visit(epiccuriousurls[i]);
+            cy.wait(5000)
+            cy.log('Taking screenshot of:' + epiccuriousurls[i])
+            cy.eyesCheckWindow({
+                target: 'window',
+                fully: true
+            })
+            cy.eyesClose();
+        }
     })
 });
