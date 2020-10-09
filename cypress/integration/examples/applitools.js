@@ -172,12 +172,12 @@ const wiredurls = [
     //'https://www.wired.com/story/coronavirus-covid-19-asmr/',
     'https://www.wired.com/video/watch/each-and-every-every-dog-breed-explained-part-2'
     ]
-const scenarioList = [allureurls, architectureurls, bonappetiturls, travelerurls, epiccuriousurls, glamoururls, gqurls, lennyletterurls, pitchforkurls, selfurls,
-    teenvogueurls, thenewyorkerurls, themurls, vanityfairurls, vogueurls, wiredurls]
-
+// const scenarioList = [allureurls, architectureurls, bonappetiturls, travelerurls, epiccuriousurls, glamoururls, gqurls, lennyletterurls, pitchforkurls, selfurls,
+//     teenvogueurls, thenewyorkerurls, themurls, vanityfairurls, vogueurls, wiredurls]
+const scenarioList = [allureurls]
 describe('Should Visually Validate CondeNast Brand Sites', () => {
     for (let s=0; s<scenarioList.length; s++) {
-        it('Should take a full page screenshot ', () => {
+        it('Should take a full page screenshot ' + Object.keys(scenarioList[s]), () => {
             for(let i=0; i<scenarioList[s].length; i++){
                 cy.eyesOpen({
                     appName: 'CondeNast-Prod',
