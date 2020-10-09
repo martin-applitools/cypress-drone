@@ -105,7 +105,7 @@ const teenvogueurls = [
     // 'https://www.teenvogue.com/sponsored/gallery/native-gallery-product-gallery',
     'https://www.teenvogue.com/sponsored/story/20-silver-linings-to-virtual-prom',
     'https://www.teenvogue.com/tag/love',
-    'https://www.teenvogue.com/verso-homepage/homepage',
+    //'https://www.teenvogue.com/verso-homepage/homepage',
     'https://www.teenvogue.com/video/watch/casey-cott-reviews-riverdale-memes',
     ]
 const thenewyorkerurls = [
@@ -116,7 +116,7 @@ const thenewyorkerurls = [
     'https://www.newyorker.com/cartoons/issue-cartoons/cartoons-from-the-november-11-2019-issue',
     'https://www.newyorker.com/culture/the-new-yorker-interview/if-youre-in-the-song-keep-on-playing-pharoah-sanders-interview',
     'https://www.newyorker.com/magazine/2019/06/10/the-children',
-    'https://www.newyorker.com/magazine/2019/10/07/todd-phillips-joker-is-no-laughing-matter',
+    //'https://www.newyorker.com/magazine/2019/10/07/todd-phillips-joker-is-no-laughing-matter',
     'https://www.newyorker.com/puzzles-and-games-dept/crossword/2019/05/13',
     //'https://www.newyorker.com/sponsored/story/test-test',
     'https://www.newyorker.com/video/watch/obsessions-how-does-a-plant-grow-without-soil'
