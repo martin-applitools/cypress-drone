@@ -178,7 +178,7 @@ const scenarioList = [allureurls, architectureurls, bonappetiturls, travelerurls
 //
 describe('Should Visually Validate CondeNast Brand Sites', () => {
     for (let s=0; s<scenarioList.length; s++) {
-        it('Should take a full page screenshot ' + Object.keys(scenarioList[s]), () => {
+        it('Should take a full page screenshot ', () => {
             for(let i=0; i<scenarioList[s].length; i++){
                 cy.eyesOpen({
                     appName: 'CondeNast-Prod',
