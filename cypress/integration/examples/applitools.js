@@ -189,6 +189,7 @@ describe('Should Visually Validate CondeNast Brand Sites', () => {
                 cy.scrollTo('bottom', { duration: 10000 })
                 cy.scrollTo('top')
                 cy.eyesCheckWindow({
+                    tag: scenarioList[s][i],
                     target: 'window',
                     fully: true
                 })
