@@ -10,8 +10,7 @@
     "cypress": "^5.3.0"
   },
   "devDependencies": {
-    "@applitools/eyes-cypress": "^3.12.3",
-    "cypress-log-to-output": "^1.1.2"
+    "@applitools/eyes-cypress": "3.14.0"
   },
   "repository": {
     "type": "git",
