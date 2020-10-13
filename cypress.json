@@ -7,6 +7,5 @@
   "supportFile": "cypress/support/index.js",
   "pluginsFile": "cypress/plugins/index.js",
   "videosFolder": "cypress/videos",
-  "video":false,
-  "chromeWebSecurity": false
+  "video":false
 }
