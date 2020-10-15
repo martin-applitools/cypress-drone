@@ -8,7 +8,7 @@ steps:
     commands:
       - npm install
       - npx eyes-setup
-      - npx cypress run --headless --browser=chrome --parallel
+      - npx cypress run --headless --browser=chrome --parallel --record
 type:
 trigger:
   event:
