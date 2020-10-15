@@ -9,18 +9,7 @@ steps:
       - npm install
       - npx eyes-setup
       - npx cypress run --headless --browser=chrome --record --key=27296f34-9ee6-4861-ae2e-6c8cc79754bb --parallel
-  - name: cypressB
-    image: cypress/included:5.3.0
-    commands:
-      - npm install
-      - npx eyes-setup
-      - npx cypress run --headless --browser=chrome --record --key=27296f34-9ee6-4861-ae2e-6c8cc79754bb --parallel
-  - name: cypressC
-    image: cypress/included:5.3.0
-    commands:
-      - npm install
-      - npx eyes-setup
-      - npx cypress run --headless --browser=chrome --record --key=27296f34-9ee6-4861-ae2e-6c8cc79754bb --parallel
+
 type:
 trigger:
   event:
