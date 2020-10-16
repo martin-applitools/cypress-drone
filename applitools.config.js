@@ -1,7 +1,6 @@
 module.exports = {
     showLogs: false,
     saveDebugData: false,
-    apiKey: 'zu4BybAMbOeRPtYF2mWHTAjNJOiuRPcD5JOUWcBP8lU110',
     concurrency: 25,
     disableBrowserFetching: true,
     batchSequenceName: 'CondeNastPOC',
