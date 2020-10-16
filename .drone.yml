@@ -2,7 +2,7 @@
 kind: pipeline
 name: cypress-applitools-drone-ci
 
-
+pipeline:
   cypressA:
     group: cypress
     image: cypress/included:5.3.0
