@@ -1,4 +1,4 @@
----
+
 kind: pipeline
 type: docker
 name: cypressA
@@ -25,8 +25,3 @@ steps:
       - npx cypress run --headless --browser=chrome --record --key=27296f34-9ee6-4861-ae2e-6c8cc79754bb  --parallel
 ---
 
-type:
-trigger:
-  event:
-    include:
-    - pull_request
