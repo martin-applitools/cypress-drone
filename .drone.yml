@@ -17,7 +17,7 @@ type: docker
 name: cypressB
 
 steps:
-  - name: teestB
+  - name: testB
     image: cypress/included:5.3.0
     commands:
       - npm install
@@ -39,4 +39,5 @@ steps:
 
 trigger:
   branch:
+    exclude:
     - development
