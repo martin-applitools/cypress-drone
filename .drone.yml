@@ -17,7 +17,7 @@ type: docker
 name: cypressB
 
 steps:
-  - name: test
+  - name: test2
     image: cypress/included:5.3.0
     commands:
       - npm install
