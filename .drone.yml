@@ -1,19 +1,42 @@
----
+
 kind: pipeline
-name: cypress-applitools-drone-ci
+type: docker
+name: cypressA
 
 steps:
-  - name: testing
-    #shm_size: 4096000000
-    #detach: true
-    #image: cypress/browsers:node12.14.1-chrome85-ff81
+  - name: testA
     image: cypress/included:5.3.0
     commands:
       - npm install
       - npx eyes-setup
-      - npx cypress run --headless --browser=chrome
-type:
+      - npx cypress run --headless --browser=chrome --record --key=27296f34-9ee6-4861-ae2e-6c8cc79754bb  --parallel
+
+---
+kind: pipeline
+type: docker
+name: cypressB
+
+steps:
+  - name: teestB
+    image: cypress/included:5.3.0
+    commands:
+      - npm install
+      - npx eyes-setup
+      - npx cypress run --headless --browser=chrome --record --key=27296f34-9ee6-4861-ae2e-6c8cc79754bb  --parallel
+
+---
+kind: pipeline
+type: docker
+name: cypressC
+
+steps:
+  - name: testC
+    image: cypress/included:5.3.0
+    commands:
+      - npm install
+      - npx eyes-setup
+      - npx cypress run --headless --browser=chrome --record --key=27296f34-9ee6-4861-ae2e-6c8cc79754bb  --parallel
+
 trigger:
-  event:
-    include:
-    - pull_request
+  branch:
+    - development

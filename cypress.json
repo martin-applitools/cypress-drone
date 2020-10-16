@@ -3,10 +3,10 @@
   "pageLoadTimeout": 180000,
   "eyesTimeout": 180000,
   "fixturesFolder": false,
+  "projectId": "ueme14",
   "integrationFolder": "cypress/integration",
   "supportFile": "cypress/support/index.js",
   "pluginsFile": "cypress/plugins/index.js",
   "videosFolder": "cypress/videos",
-  "video":false,
-  "chromeWebSecurity": false
+  "video":false
 }

@@ -172,8 +172,8 @@ const wiredurls = [
     //'https://www.wired.com/story/coronavirus-covid-19-asmr/',
     'https://www.wired.com/video/watch/each-and-every-every-dog-breed-explained-part-2'
     ]
-//const scenarioList = [allureurls]
-const scenarioList = [allureurls, architectureurls, bonappetiturls, travelerurls, epiccuriousurls]
+//const scenarioList = [teenvogueurls]
+const scenarioList = [teenvogueurls, thenewyorkerurls, themurls, vanityfairurls, vogueurls, wiredurls]
 //
 describe('Should Visually Validate CondeNast Brand Sites', () => {
     for (let s=0; s<scenarioList.length; s++) {
