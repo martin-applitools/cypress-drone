@@ -9,7 +9,6 @@ module.exports = {
     useDom: true,
     enablePatterns: true,
     failCypressOnDiff: false,
-    //batchName: 'CondeNast Build: ' + process.env.DRONE_BUILD_NUMBER,
     batchId: process.env.DRONE_COMMIT_SHA,
     matchLevel: 'Layout',
     browser: [
