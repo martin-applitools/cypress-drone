@@ -18,7 +18,17 @@
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
+    on('before:browser:launch', (browser = {}, launchOptions) => {
+        if (browser.family === 'chromium' && browser.name !== 'electron') {
+            launchOptions.args.push('--disable-dev-shm-usage')
+        }
+
+        return launchOptions
+
+    })
+    //require('cypress-log-to-output').install(on)
 }
 
 
 require('@applitools/eyes-cypress')(module);
+

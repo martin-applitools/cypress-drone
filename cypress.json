@@ -1,13 +1,12 @@
 {
-  "defaultCommandTimeout": 160000,
-  "eyesTimeout": 180000,
+  "defaultCommandTimeout": 180000,
   "pageLoadTimeout": 180000,
+  "eyesTimeout": 180000,
   "fixturesFolder": false,
-  "integrationFolder": "/drone/src/cypress/integration",
-  "supportFile": "/drone/src/cypress/support/index.js",
-  "pluginsFile": "/drone/src/cypress/plugins/index.js",
-  "videosFolder": "/drone/src/cypress/videos",
-  "video":false,
-  "viewportWidth": 800,
-  "viewportHeight": 600
+  "projectId": "ueme14",
+  "integrationFolder": "cypress/integration",
+  "supportFile": "cypress/support/index.js",
+  "pluginsFile": "cypress/plugins/index.js",
+  "videosFolder": "cypress/videos",
+  "video":false
 }
