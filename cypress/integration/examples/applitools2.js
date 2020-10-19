@@ -181,7 +181,12 @@ describe('Should Visually Validate CondeNast Brand Sites', () => {
             for(let i=0; i<scenarioList[s].length; i++){
                 cy.eyesOpen({
                     appName: 'CondeNast-Prod',
-                    testName: scenarioList[s][i]
+                    testName: scenarioList[s][i],
+                    browser: [
+                        //W3C Top5 Screen Resolutions through 10/19 https://www.w3counter.com/globalstats.php
+                        {width: 1280, height: 720, name: 'chrome' },
+
+                    ],
 
                 });
                 cy.visit(scenarioList[s][i]);
