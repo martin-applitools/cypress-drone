@@ -1,7 +1,8 @@
 module.exports = {
     showLogs: false,
-    apiKey: 'zu4BybAMbOeRPtYF2mWHTAjNJOiuRPcD5JOUWcBP8lU110',
     dontCloseBatches: true,
+    apiKey: 'zu4BybAMbOeRPtYF2mWHTAjNJOiuRPcD5JOUWcBP8lU110',
+
     concurrency: 25,
     disableBrowserFetching: true,
     batchSequenceName: 'CondeNastPOC',
@@ -44,5 +45,6 @@ module.exports = {
         //{deviceName: "Pixel 2", screenOrientation: 'portrait', name: 'chrome'},
         //{deviceName: "Nexus 6", screenOrientation: 'portrait', name: 'chrome'},
         //{deviceName: "iPad", screenOrientation: 'landscape', name: 'chrome'},
+
     ],
 };
