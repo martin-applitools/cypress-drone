@@ -1,4 +1,4 @@
-function takeScreenshot(url) {
+export function takeScreenshot(url) {
   cy.eyesOpen({
     appName: 'Verso',
     testName: url,
@@ -10,4 +10,4 @@ function takeScreenshot(url) {
   cy.eyesClose();
 }
 
-module.exports = { takeScreenshot };
+

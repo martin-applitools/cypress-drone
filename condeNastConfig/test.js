@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 //const { getScreenshotUrls } = require('../../config/brand-aggregator');
-const { takeScreenshot } = require('cypress/integration/examples/take-screenshot');
+const { takeScreenshot } = require('take-screenshot');
 const testTypes = getScreenshotUrls();
 const uniqueUrls = [];
 //const screenshotTests = require('./screenshot-tests.json');
