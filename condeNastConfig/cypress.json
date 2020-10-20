@@ -1,0 +1,27 @@
+{
+  "api_url": "https://conde-cypress-director.herokuapp.com/",
+  "blockHosts": [
+    "cdn.cookielaw.org",
+    "cdn.ampproject.org",
+    "z-na.amazon-adsystem.com"
+  ],
+  "chromeWebSecurity": false,
+  "env": {
+    "authenticatedCookie": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlYTgwZGEyNS00YjI5LTQwMTgtOGY4NS1hZWUyMGYzMzQ1ZGIiLCJpYXQiOjE1OTQ5MDg4ODUsImV4cCI6MTYyNjQ2NjQ4NSwiaXNzIjoidXNlci1wbGF0Zm9ybS1nYXRld2F5In0.LRdeJxqjm1YY8Kz3L6TRwtSCDd3n1moeYCOxXu22QFtvdE-uz_NOz6rS7Ufeuh7zOsB6v8lQI68LVMDTLYmVwet3_-B9V7-BjeUonQOVsrWlhOUsSka0OWesUBAK-4vsq7YcVw-u6_4QjxVnkryhObtRG4wu-BAtdc35f-l-y_QaUC7XNphbrUYVU_gx3WBrY5-n6MlLWtGReJ9Gp4A_i1RzIa400PKqgnc-Ukxirl-2bKy4OahWPjz70AgNnXa5NEC9Hkm9HAgREYJBs4DVC3tucOMTvPXXXjXQO0yjYvGBVgVTQopkBE3RHUh9Pa3KpJGPCdF1ecZQKpTrnvJIsg",
+    "runStorybook": false,
+    "runDynamicStorybook": false,
+    "generateStorybookFixture": false,
+    "storybookUrl": "http://localhost:6006",
+    "accountCredentials": {
+      "email": "royexi6326@openavz.com",
+      "password": "1cat2345"
+    }
+  },
+  "numTestsKeptInMemory": 15,
+  "nodeVersion": "system",
+  "viewportWidth": 1280,
+  "viewportHeight": 720,
+  "userAgent": "Cypress Runner",
+  "projectId": "cag4r9",
+  "video": false
+}

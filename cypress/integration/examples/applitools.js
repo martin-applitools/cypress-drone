@@ -1,5 +1,7 @@
 
 /// <reference types="@applitools/eyes-cypress" />
+const { takeScreenshot } = require('take-screenshot')
+
 const allureurls = ['https://www.allure.com/account/sign-in',
     'https://www.allure.com/account/sign-up',
     'https://www.allure.com/gallery/best-body-washes',
@@ -177,30 +179,14 @@ const scenarioList = [allureurls, architectureurls, bonappetiturls, travelerurls
 //
 describe('Should Visually Validate CondeNast Brand Sites', () => {
     for (let s=0; s<scenarioList.length; s++) {
-        it('Should take a full page screenshot ', () => {
-            for(let i=0; i<scenarioList[s].length; i++){
-                cy.eyesOpen({
-                    appName: 'CondeNast-Prod',
-                    testName: scenarioList[s][i],
-                    browser: [
-                        //W3C Top5 Screen Resolutions through 10/19 https://www.w3counter.com/globalstats.php
-                        {width: 1280, height: 720, name: 'chrome' },
-
-                    ],
-
-
-                });
-                cy.visit(scenarioList[s][i]);
-                cy.scrollTo('bottom', { duration: 15000 })
-                cy.scrollTo('top')
-                cy.eyesCheckWindow({
-                    tag: scenarioList[s][i],
-                    target: 'window',
-                    fully: true
-                })
-                cy.eyesClose();
-            }
-        });
+        for(let i=0; i<scenarioList[s].length; i++){
+            cy.visit(scenarioList[s][i]);
+            cy.scrollTo('bottom', { duration: 15000 })
+            cy.scrollTo('top')
+            it('Should take a full page screenshot ', () => {
+                takeScreenshot(cy, scenarioList[s][i])
+            })
+        };
 
     }
 });

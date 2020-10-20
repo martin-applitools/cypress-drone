@@ -1,10 +1,10 @@
 
 kind: pipeline
 type: docker
-name: cypressA
+name: cypress
 
 steps:
-  - name: testA
+  - name: test
     image: cypress/included:5.3.0
     commands:
       - npm install
@@ -14,35 +14,4 @@ trigger:
   event:
     include:
       - pull_request
----
-kind: pipeline
-type: docker
-name: cypressB
 
-steps:
-  - name: testB
-    image: cypress/included:5.3.0
-    commands:
-      - npm install
-      - npx eyes-setup
-      - npx cypress run --headless --browser=chrome --record --key=27296f34-9ee6-4861-ae2e-6c8cc79754bb  --parallel
-trigger:
-  event:
-    include:
-      - pull_request
----
-kind: pipeline
-type: docker
-name: cypressC
-
-steps:
-  - name: testC
-    image: cypress/included:5.3.0
-    commands:
-      - npm install
-      - npx eyes-setup
-      - npx cypress run --headless --browser=chrome --record --key=27296f34-9ee6-4861-ae2e-6c8cc79754bb  --parallel
-trigger:
-  event:
-    include:
-      - pull_request
