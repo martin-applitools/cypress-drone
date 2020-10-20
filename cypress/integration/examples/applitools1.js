@@ -1,5 +1,5 @@
 import { takeScreenshot } from "../../../take-screenshot"
-
+const batchId = process.env.DRONE_COMMIT_SHA
 const allureurls = ['https://www.allure.com/account/sign-in',
     'https://www.allure.com/account/sign-up',
     'https://www.allure.com/gallery/best-body-washes',
