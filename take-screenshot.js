@@ -2,7 +2,7 @@ export function takeScreenshot(url, batchId) {
   cy.eyesOpen({
     appName: 'Verso',
     testName: url,
-    batchId
+    batchId: process.env.DRONE_COMMIT_SHA
   });
   cy.eyesCheckWindow({
     target: 'window',
