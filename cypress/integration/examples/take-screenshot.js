@@ -1,4 +1,4 @@
-function takeScreenshot(cy, url) {
+function takeScreenshot(url) {
   cy.eyesOpen({
     appName: 'Verso',
     testName: url,
