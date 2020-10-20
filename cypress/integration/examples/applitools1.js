@@ -181,8 +181,6 @@ describe('Should Visually Validate CondeNast Brand Sites', () => {
         for(let i=0; i<scenarioList[s].length; i++){
             beforeEach(() => {
                 cy.visit(scenarioList[s][i], { failOnStatusCode: false });
-                cy.scrollTo('bottom', { duration: 15000 })
-                cy.scrollTo('top')
             })
 
             it('Should take a full page screenshot ' + scenarioList[s][i], () => {
