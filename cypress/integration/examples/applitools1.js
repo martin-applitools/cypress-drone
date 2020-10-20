@@ -179,11 +179,13 @@ const scenarioList = [glamoururls, gqurls, lennyletterurls, pitchforkurls, selfu
 describe('Should Visually Validate CondeNast Brand Sites', () => {
     for (let s=0; s<scenarioList.length; s++) {
         for(let i=0; i<scenarioList[s].length; i++){
-
-            it('Should take a full page screenshot ' + scenarioList[s][i], () => {
-                cy.visit(scenarioList[s][i]);
+            beforeEach(() => {
+                cy.visit(scenarioList[s][i], { failOnStatusCode: false });
                 cy.scrollTo('bottom', { duration: 15000 })
                 cy.scrollTo('top')
+            })
+
+            it('Should take a full page screenshot ' + scenarioList[s][i], () => {
                 takeScreenshot(scenarioList[s][i], batchId)
                 })
         };
