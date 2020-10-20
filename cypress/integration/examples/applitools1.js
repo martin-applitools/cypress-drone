@@ -180,7 +180,7 @@ describe('Should Visually Validate CondeNast Brand Sites', () => {
     for (let s=0; s<scenarioList.length; s++) {
         for(let i=0; i<scenarioList[s].length; i++){
             beforeEach(() => {
-                cy.visit(scenarioList[s][i], { failOnStatusCode: false });
+                //cy.visit(scenarioList[s][i], { failOnStatusCode: false });
             })
 
             it('Should take a full page screenshot ' + scenarioList[s][i], () => {
