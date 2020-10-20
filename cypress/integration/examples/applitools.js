@@ -1,6 +1,6 @@
 
 /// <reference types="@applitools/eyes-cypress" />
-import {takeScreenshot} from "cypress/integration/examples/take-screenshot.js";
+const { takeScreenshot } = require('cypress/integration/examples/take-screenshot');
 
 
 const allureurls = ['https://www.allure.com/account/sign-in',
